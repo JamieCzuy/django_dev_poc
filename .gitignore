@@ -1,0 +1,7 @@
+# ---- Ignore these Folders ---- #
+tmp/
+__pycache__/
+
+# ---- Ignore these Files ---- #
+.env
+
