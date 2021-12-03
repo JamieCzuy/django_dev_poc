@@ -4,7 +4,7 @@
 export COMMAND_TO_RUN="${COMMAND_TO_RUN:-${@}}"
 
 # ---- Handle other env vars ---- #
-export APP_NAME=${APP_NAME:-"fastapi_admin"}
+export APP_NAME=${APP_NAME:-"django_project"}
 export CONTAINER_NAME=${CONTAINER_NAME:-${APP_NAME}}
 export IMAGE_NAME=${IMAGE_NAME:-${APP_NAME}}
 export PUBLISHED_PORT=${PUBLISHED_PORT:-"8000"}
@@ -36,7 +36,7 @@ docker run \
     -it \
     --name ${CONTAINER_NAME} \
     --publish ${PUBLISHED_PORT}:8000 \
-    --volume `pwd`/app:${TARGET_FOLDER} \
+    --volume `pwd`/django_project:${TARGET_FOLDER} \
     ${IMAGE_NAME} \
     ${COMMAND_TO_RUN}
 
